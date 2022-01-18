@@ -14,7 +14,7 @@ def floatMatching():
     while(True):
     
         #Made a screenshot of primary screen Albion window must be visible
-        fishingAreaScreenTaken = ImageGrab.grab(bbox=(600, 220, 1250, 500))
+        fishingAreaScreenTaken = ImageGrab.grab(bbox=(770, 310, 932, 414))
         fishingAreaScreenTaken.save('fishingArea.png')
         
         #Load screenshot and picture of float for comparisons
@@ -29,7 +29,7 @@ def floatMatching():
         
         #Checking maximum result of matching, if its below 0.60 (flot go underwater)
         #Press mouse for catch a fish
-        
+        print(maxValFishing)
         if maxValFishing <=0.65:
                 pyautogui.mouseDown(button='left')
                 pyautogui.mouseUp(button='left')
@@ -73,10 +73,11 @@ def fishBarMatching():
 #While loop which start functions responsible for full fishing process    
 while(True):
     #Clear mouseDown 
+    time.sleep(1)
     pyautogui.mouseUp(button='left')
     #Sleep function becouse game need time to throw float
-    time.sleep(2)
+    time.sleep(1)
     pyautogui.mouseDown(button='left')
     pyautogui.mouseUp(button='left')
-    time.sleep(5)
+    time.sleep(1)
     floatMatching()
