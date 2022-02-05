@@ -1,4 +1,4 @@
-import cv2 as cv
+
 import time
 import pyautogui
 from PIL import ImageGrab
